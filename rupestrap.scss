@@ -1,0 +1,51 @@
+@import "reset.css";
+
+$gridwidth: 12;
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat($gridwidth, 1fr);
+}
+
+.container * {
+    border: 1px solid red;
+}
+
+.col {
+    grid-column: span $gridwidth;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+      grid-column: span $i;
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-md-#{$i} {
+      grid-column: span 12;
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      grid-column: span 12;
+    }
+}
+
+@media (min-width: 768px) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+          grid-column: span $i;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+          grid-column: span $i;
+        }
+    }
+}
