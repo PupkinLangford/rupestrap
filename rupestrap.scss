@@ -39,9 +39,6 @@ $alignments: x;
   }
 }
 
-.container > * {
-    border: 1px solid red;
-}
 
 .col {
     grid-column: span $gridwidth;
