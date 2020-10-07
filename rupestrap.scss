@@ -8,29 +8,64 @@ $gridwidth: 12;
     grid-template-columns: repeat($gridwidth, 1fr);
 }
 
-.container * {
+@for $i from 1 through 50 {
+    .gap-#{$i} {
+      column-gap: #{$i}px;
+    }
+}
+
+.gap-sm {
+    column-gap: 10px;
+}
+
+.gap-md {
+    column-gap: 25px;
+}
+
+.gap-lg {
+    column-gap: 50px;
+}
+
+$justifyalignments: flex-start, flex-end, center;
+$alignments: x;
+
+@each $alignment in $justifyalignments {
+  .justify-#{$alignment} > div {
+    justify-content: $alignment;
+  }
+
+  .align-#{$alignment} > div {
+    align-items: $alignment;
+  }
+}
+
+.container > * {
     border: 1px solid red;
 }
 
 .col {
     grid-column: span $gridwidth;
+    display: flex;
 }
 
 @for $i from 1 through 12 {
     .col-#{$i} {
       grid-column: span $i;
+      display: flex;
     }
 }
 
 @for $i from 1 through 12 {
     .col-md-#{$i} {
       grid-column: span 12;
+      display: flex;
     }
 }
 
 @for $i from 1 through 12 {
     .col-lg-#{$i} {
       grid-column: span 12;
+      display: flex;
     }
 }
 
