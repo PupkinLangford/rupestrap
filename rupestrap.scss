@@ -1,6 +1,7 @@
-@import "reset.css";
+@import "reset.css"; 
 
 $gridwidth: 12;
+
 
 .container {
     width: 100%;
@@ -42,27 +43,28 @@ $alignments: x;
 
 .col {
     grid-column: span $gridwidth;
-    display: flex;
+    //display: flex;
 }
 
-@for $i from 1 through 12 {
-    .col-#{$i} {
-      grid-column: span $i;
-      display: flex;
-    }
-}
 
 @for $i from 1 through 12 {
     .col-md-#{$i} {
       grid-column: span 12;
-      display: flex;
+      //display: flex;
     }
 }
 
 @for $i from 1 through 12 {
     .col-lg-#{$i} {
       grid-column: span 12;
-      display: flex;
+     // display: flex;
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+      grid-column: span $i;
+      //display: flex;
     }
 }
 
