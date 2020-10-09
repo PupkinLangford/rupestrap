@@ -1,4 +1,12 @@
 @import "reset.css";
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
 .container {
   width: 100%;
   display: grid;
@@ -217,28 +225,32 @@
   column-gap: 50px;
 }
 
-.justify-flex-start > div {
-  justify-content: flex-start;
+.align-start {
+  align-content: start;
 }
 
-.align-flex-start > div {
-  align-items: flex-start;
+.align-end {
+  align-content: end;
 }
 
-.justify-flex-end > div {
-  justify-content: flex-end;
+.align-center {
+  align-content: center;
 }
 
-.align-flex-end > div {
-  align-items: flex-end;
+.align-stretch {
+  align-content: stretch;
 }
 
-.justify-center > div {
-  justify-content: center;
+.align-space-around {
+  align-content: space-around;
 }
 
-.align-center > div {
-  align-items: center;
+.align-space-between {
+  align-content: space-between;
+}
+
+.align-space-evenly {
+  align-content: space-evenly;
 }
 
 .col {

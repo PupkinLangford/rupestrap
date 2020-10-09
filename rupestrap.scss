@@ -2,6 +2,13 @@
 
 $gridwidth: 12;
 
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
 
 .container {
     width: 100%;
@@ -27,44 +34,35 @@ $gridwidth: 12;
     column-gap: 50px;
 }
 
-$justifyalignments: flex-start, flex-end, center;
-$alignments: x;
+$alignments: start, end, center, stretch, space-around, space-between, space-evenly;
 
-@each $alignment in $justifyalignments {
-  .justify-#{$alignment} > div {
-    justify-content: $alignment;
-  }
-
-  .align-#{$alignment} > div {
-    align-items: $alignment;
+@each $alignment in $alignments {
+  .align-#{$alignment}  {
+    align-content: $alignment;
   }
 }
 
 
 .col {
     grid-column: span $gridwidth;
-    //display: flex;
 }
 
 
 @for $i from 1 through 12 {
     .col-md-#{$i} {
       grid-column: span 12;
-      //display: flex;
     }
 }
 
 @for $i from 1 through 12 {
     .col-lg-#{$i} {
       grid-column: span 12;
-     // display: flex;
     }
 }
 
 @for $i from 1 through 12 {
     .col-#{$i} {
       grid-column: span $i;
-      //display: flex;
     }
 }
 
